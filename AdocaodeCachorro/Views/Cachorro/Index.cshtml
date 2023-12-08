@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AdocaodeCachorro.Models.Cachorro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.CachorroNome) 
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dono.NomeDono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Raca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Idade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.CachorroNome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Dono.NomeDono)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Raca)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Idade)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.CachorroID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.CachorroID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.CachorroID })
+    </td>
+</tr>
+}
+
+</table>

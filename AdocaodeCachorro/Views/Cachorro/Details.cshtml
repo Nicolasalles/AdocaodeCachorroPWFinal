@@ -1,0 +1,50 @@
+﻿@model AdocaodeCachorro.Models.Cachorro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cachorro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dono.NomeDono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dono.NomeDono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CachorroNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CachorroNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Raca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Raca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CachorroID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
